@@ -1,0 +1,14 @@
+
+<div class="container">
+  <h1>Movies or something</h1>
+    <%= link_to 'Make a new list!', new_list_path %>
+    <div class="container">
+      <%@lists.each do |list| %>
+        <div class="cards">
+          <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),">
+            <%= link_to list.name, list_path(list.id), class: 'btn btn-primary mt-3'  %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+</div>
