@@ -3,6 +3,7 @@ class BookmarksController < ApplicationController
   def new
     @list = List.find(params[:list_id])
     @bookmark = Bookmark.new
+    @movies = Movie.where.not(id: @list.movie).order(name: :asc)
   end
 
   def create
