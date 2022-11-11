@@ -1,16 +1,15 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://png.pngtree.com/thumb_back/fh260/back_our/20190621/ourmid/pngtree-steam-wave-international-film-festival-banner-poster-image_195212.jpg);">
   <h1>Movies or something</h1>
-    <%= link_to 'Make a new list!', new_list_path %>
+    <h2 class='list-header'><%= link_to 'Make a new list!', new_list_path %></h2>
 </div>
 <div class="container mt-3 ms-5 me-5">
     <h2>My Lists</h2>
     <div class="container d-flex ">
-      <%@lists.each do |list| %>
-        <div class="cards">
-          <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),">
-            <%= link_to list.name, list_path(list.id), class: 'btn btn-primary mt-3'  %>
-          </div>
-        </div>
+      <div class="cards">
+        <%@lists.each do |list| %>
+            <div class="item card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= list.photo.attached? ? cl_image_path(list.photo.key) : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPQDYau3Hs4-xw1i8jVSUY4BlF4FLmg8lQqg&usqp=CAU' %>)">
+            </div>
       <% end %>
+        </div>
     </div>
 </div>
