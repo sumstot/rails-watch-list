@@ -12,10 +12,13 @@
 @import "pages/index";
 @import "components/card_category";
 @import "components/cards";
-@import 'components/product_cards';
+@import 'components/card_product';
 @import 'components/banner';
 
 body {
-  background-color: #1B0537
+  background-color: #9a8ab0
 }
 
+a:link { text-decoration: none; }
+
+a:hover {}
