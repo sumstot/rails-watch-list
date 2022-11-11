@@ -1,6 +1,6 @@
 <div class="container">
   <%= simple_form_for [@list, @bookmark] do |f| %>
-    <%= f.association :movie %>
+    <%= f.association :movie, # add collections to alphabatize   %>
     <%= f.input :comment %>
     <%= f.submit  %>
   <% end %>
